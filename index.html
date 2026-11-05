@@ -139,18 +139,7 @@
   </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Automatic redirect after 10 seconds; clicking a Telegram link opens it immediately.
-    const telegramUrl = document.getElementById('joinTelegram').href;
-    let secondsLeft = 10;
-    const countdown = document.getElementById('countdown');
-    const timer = setInterval(() => {
-      secondsLeft -= 1;
-      countdown.textContent = secondsLeft;
-      if (secondsLeft <= 0) {
-        clearInterval(timer);
-        window.location.href = telegramUrl;
-      }
-    }, 1000);
+
 
     const policyContent = {
       privacy: '<p>This landing page may use Meta Pixel to measure page visits and interactions. Information collected through Meta Pixel is handled according to Meta\'s policies. The Telegram button opens Telegram; information shared there is subject to Telegram\'s terms and privacy policy.</p><p>For privacy-related questions, contact the page administrator through the contact link shown on this page.</p>',
